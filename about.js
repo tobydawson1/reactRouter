@@ -2,12 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function About() {
   return (
     <div className="App">
-      <h1> App </h1>
+      <h1> About page </h1>
     </div>
   );
 }
 
-export default App;
+export default About;
