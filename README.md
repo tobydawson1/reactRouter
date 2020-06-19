@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Task 
 
+Practice laying out correct routes using good practice and utilizing features such as having a Nav bar.
+
 ## Available Scripts
 
 In the project directory, you can run:
