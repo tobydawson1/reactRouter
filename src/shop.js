@@ -4,21 +4,33 @@ import './App.css';
 
 function Shop() {
 
+  const APP_ID = "2768748c";
+  const APP_KEY = "2bfe199293484f7d2747e51188f424be";
+  const query = 'chicken';
+
+
   useEffect(() => {
     fetchItems()
   },[]);
 
+  const [items, setItems] = useState([]);
+
   const fetchItems = async () => {
-    const data = await fetch(`https://www.reddit.com/r/reactjs.json`
+    const data = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
 
-    const items = await data.json();
+   
+    const items = await data.json(); 
     console.log(items)
+    setItems(items.hits);
   };
 
   return (
     <div className="App">
-      <h1> Shop page </h1>
+      {items.map(item => (
+        <h1>{item.recipe.label}</h1>
+        
+      ))}
     </div>
   );
 }
