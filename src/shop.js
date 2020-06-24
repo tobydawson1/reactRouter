@@ -21,14 +21,14 @@ function Shop() {
 
    
     const items = await data.json(); 
-    console.log(items)
+    console.log(items.hits)
     setItems(items.hits);
   };
 
   return (
     <div className="App">
       {items.map(item => (
-        <h1>{item.recipe.label}</h1>
+        <h1 key={item.recipe.label}>{item.recipe.label}</h1>
         
       ))}
     </div>
