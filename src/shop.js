@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
+import {Link} from 'react-router-dom'
 import './App.css';
 
 function Shop() {
@@ -28,8 +28,9 @@ function Shop() {
   return (
     <div className="App">
       {items.map(item => (
-        <h1 key={item.recipe.label}>{item.recipe.label}</h1>
-        
+        <h1 key={item.recipe.label}>
+          <Link to={`/shop/${item.recipe.label}`}>{item.recipe.label}</Link>
+          </h1>
       ))}
     </div>
   );
