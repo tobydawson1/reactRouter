@@ -30,7 +30,7 @@ function Shop() {
       {items.map(item => (
         <h1 key={item.recipe.label}>
           <Link to={`/shop/${item.recipe.label}`}>{item.recipe.label}</Link>
-          </h1>
+        </h1>
       ))}
     </div>
   );
